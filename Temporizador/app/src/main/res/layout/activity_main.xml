@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Texto "Tap to start" superior -->
+    <TextView
+        android:id="@+id/tap_to_start_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="Tap to start"
+        android:textColor="@android:color/black"
+        android:textSize="46sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Temporizador superior -->
+    <TextView
+        android:id="@+id/top_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="05:00"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tap_to_start_top"
+        android:layout_marginTop="4dp" /> <!-- Ajuste del margen superior -->
+
+    <!-- Botones centrados ocupando todo el espacio inferior -->
+    <LinearLayout
+        android:id="@+id/linearLayout_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bottom_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_timer">
+
+        <Button
+            android:id="@+id/button_1_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Inicio" />
+
+        <Button
+            android:id="@+id/button_2_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Pausa" />
+
+        <Button
+            android:id="@+id/button_3_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Resetear" />
+    </LinearLayout>
+
+    <!-- Temporizador inferior -->
+    <TextView
+        android:id="@+id/bottom_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="05:00"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_top"
+        android:layout_marginTop="4dp" /> <!-- Ajuste del margen superior -->
+
+    <!-- Texto "Tap to start" inferior -->
+    <TextView
+        android:id="@+id/tap_to_start_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tap to start"
+        android:textColor="@android:color/black"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_timer"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
